@@ -1,0 +1,28 @@
+# Prion Geography (Lumen/Laraval 5 Package)
+
+Prion Geography is an easy way import and utilize geography data.
+
+Tested on Lumen 5.8
+
+## Installation
+
+`composer require "prion-development/geography:5.8.*"`
+
+In config/app.php, add the following provider:
+PrionDevelopment\Providers\PrionGeographyProvider::class
+
+Publish the Migrations & Config
+`php artisan vendor:publish --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+
+Or you can publish the migrations or the config separately.
+`php artisan vendor:publish --tag=config --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish --tag=migrations --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+
+Clear or reset your Laravel config cache.
+`php artisan config:clear`
+`php artisan config:cache`
+
+
+## License
+
+Prion Geography is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

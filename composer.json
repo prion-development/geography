@@ -1,0 +1,61 @@
+{
+    "name": "priondevelopment/geography",
+    "config": {
+        "sort-packages": true
+    },
+    "description": "Pull geography specific data.",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Geography\\ServiceProvider"
+            ],
+            "aliases": {
+                "Geography": "Geography\\Facade"
+            }
+        }
+    },
+    "homepage": "https://priondevelopment.com/packages/geography",
+    "keywords": ["geography","states","countries"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/priondevelopment/geography/issues",
+        "source": "https://github.com/priondevelopment/geography"
+    },
+    "authors": [
+        {
+            "name": "Prion Development",
+            "email": "packages@priondevelopment.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src",
+            "database/migrations",
+            "database/factories",
+            "database/seeders"
+        ],
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "PrionDevelopment\\Geography\\": "src/",
+            "PrionDevelopment\\Geography\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Geography\\Tests\\": "src/tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "illuminate/cache": "^8.24"
+    },
+    "require-dev": {
+        "php": "^8.0",
+        "laravel/legacy-factories": "^1.0.4",
+        "orchestra/testbench": "^6.9"
+    }
+}
