@@ -7,10 +7,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Geography\\ServiceProvider"
+                "Geography\\GeographyServiceProvider"
             ],
             "aliases": {
-                "Geography": "Geography\\Facade"
+                "Geography": "Geography\\GeographyFacade"
             }
         }
     },
