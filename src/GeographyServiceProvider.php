@@ -25,6 +25,8 @@ class GeographyServiceProvider extends ServiceProvider
     /** @var array */
     protected $setup = [
         \PrionDevelopment\Geography\Providers\ConfigProvider::class,
+        \PrionDevelopment\Geography\Providers\FactoryProvider::class,
+        \PrionDevelopment\Geography\Providers\MigrationProvider::class,
     ];
 
     /**

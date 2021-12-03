@@ -2,7 +2,7 @@
 
 Prion Geography is an easy way import and utilize geography data.
 
-Tested on Lumen 5.8
+Tested on Lumen 8.0
 
 ## Installation
 
@@ -15,8 +15,8 @@ Publish the Migrations & Config
 `php artisan vendor:publish --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
 
 Or you can publish the migrations or the config separately.
-`php artisan vendor:publish --tag=config --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
-`php artisan vendor:publish --tag=migrations --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish --tag=prion-geography --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish --tag=geography-migrations --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
 
 Clear or reset your Laravel config cache.
 `php artisan config:clear`
