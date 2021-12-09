@@ -4,15 +4,14 @@ namespace PrionDevelopment\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use PrionDevelopment\Geography\Models\DivisionType;
+use PrionDevelopment\Geography\Models\LocalityType;
 
-class DivisionTypeSeeder extends Seeder
+class LocalitySeeder extends Seeder
 {
     /** @var string[] */
-    protected $divisions = [
-        'state',
-        'territory',
-        'county',
-        'province'
+    protected $localities = [
+        'city',
+        'town',
     ];
 
     /**
@@ -22,9 +21,9 @@ class DivisionTypeSeeder extends Seeder
      */
     public function run()
     {
-        foreach ($this->divisions as $continent) {
-            DivisionType::firstOrUpdate([
-                'name' => $continent
+        foreach ($this->localities as $locality) {
+            LocalityType::firstOrUpdate([
+                'name' => $locality
             ]);
         }
     }

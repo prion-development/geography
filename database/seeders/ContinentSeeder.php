@@ -11,13 +11,13 @@ use PrionDevelopment\Geography\Models\Continent;
 class ContinentSeeder extends Seeder
 {
     protected $continents = [
-        'North America',
-        'South America',
-        'Europe',
-        'Asia',
         'Africa',
+        'Antartica',
+        'Asia',
+        'Europe',
+        'North America',
         'Oceania',
-        'Antartica'
+        'South America',
     ];
 
     /**

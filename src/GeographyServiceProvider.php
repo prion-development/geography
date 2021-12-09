@@ -27,6 +27,7 @@ class GeographyServiceProvider extends ServiceProvider
         \PrionDevelopment\Geography\Providers\ConfigProvider::class,
         \PrionDevelopment\Geography\Providers\FactoryProvider::class,
         \PrionDevelopment\Geography\Providers\MigrationProvider::class,
+        \PrionDevelopment\Geography\Providers\SeederProvider::class,
     ];
 
     /**
