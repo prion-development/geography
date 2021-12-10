@@ -12,12 +12,12 @@ In config/app.php, add the following provider:
 PrionDevelopment\Providers\PrionGeographyProvider::class
 
 Publish the Migrations & Config
-`php artisan vendor:publish --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish`
 
 Or you can publish the migrations, config and seeders separately.
-`php artisan vendor:publish --tag=prion-geography --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
-`php artisan vendor:publish --tag=geography-migrations --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
-`php artisan vendor:publish --tag=geography-seeders --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish --tag=prion-geography`
+`php artisan vendor:publish --tag=geography-migrations`
+`php artisan vendor:publish --tag=geography-seeders`
 
 Clear or reset your Laravel config cache.
 `php artisan config:clear`
