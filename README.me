@@ -14,9 +14,10 @@ PrionDevelopment\Providers\PrionGeographyProvider::class
 Publish the Migrations & Config
 `php artisan vendor:publish --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
 
-Or you can publish the migrations or the config separately.
+Or you can publish the migrations, config and seeders separately.
 `php artisan vendor:publish --tag=prion-geography --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
 `php artisan vendor:publish --tag=geography-migrations --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
+`php artisan vendor:publish --tag=geography-seeders --provider="PrionDevelopment\Geography\GeographyServiceProvider"`
 
 Clear or reset your Laravel config cache.
 `php artisan config:clear`
