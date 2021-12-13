@@ -66,7 +66,7 @@ class CreateCountriesTables extends Migration
                 ->references('id')->on('country_regions')
                 ->onDelete('cascade');
             $table->foreign('division_type_id')
-                ->references('id')->on('division_type_id')
+                ->references('id')->on('divisions')
                 ->onDelete('cascade');
             $table->timestamps();
         });
