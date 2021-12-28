@@ -22,7 +22,7 @@ class LocalitySeeder extends Seeder
     public function run()
     {
         foreach ($this->localities as $locality) {
-            LocalityType::firstOrUpdate([
+            LocalityType::firstOrCreate([
                 'name' => $locality
             ]);
         }

@@ -23,7 +23,7 @@ class DivisionTypeSeeder extends Seeder
     public function run()
     {
         foreach ($this->divisions as $continent) {
-            DivisionType::firstOrUpdate([
+            DivisionType::firstOrCreate([
                 'name' => $continent
             ]);
         }
