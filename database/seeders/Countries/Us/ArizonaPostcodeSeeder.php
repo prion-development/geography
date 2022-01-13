@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Countries\Us;
+namespace PrionDevelopment\Database\Seeders\Countries\Us;
 
 use App\Models\Address\Country;
 use App\Models\Address\Division;

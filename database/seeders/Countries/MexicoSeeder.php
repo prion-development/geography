@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Countries;
+namespace PrionDevelopment\Database\Seeders\Countries;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
