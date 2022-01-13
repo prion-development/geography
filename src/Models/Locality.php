@@ -30,4 +30,9 @@ class Locality extends Model
         parent::__construct($attributes);
         $this->table = config('prion-geography.database.tables.localities');
     }
+
+    public function division()
+    {
+        return $this->belongsTo(Division::class);
+    }
 }

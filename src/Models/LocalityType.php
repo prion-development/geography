@@ -5,7 +5,7 @@ namespace PrionDevelopment\Geography\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 
 class LocalityType extends Model
 {
@@ -32,5 +32,32 @@ class LocalityType extends Model
     {
         parent::__construct($attributes);
         $this->table = config('prion-geography.database.tables.locality_types');
+    }
+
+    public function scopeName(Builder $builder, string $name)
+    {
+        return $builder->where('name', $name);
+    }
+
+    /**
+     * Pull a Locality Type from a String
+     *
+     * @param $iso
+     *
+     * @return LocalityType
+     */
+    public static function fromName($name): LocalityType
+    {
+        return Cache::remember("locality_type:name:{$name}", 15, function () use ($name) {
+            $localityType = LocalityType::name($name)->limit(1)->first();
+
+            if (empty($localityType)) {
+                $localityType = LocalityType::create([
+                    'name' => $name
+                ]);
+            }
+
+            return $localityType;
+        });
     }
 }

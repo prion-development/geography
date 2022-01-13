@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 
 class DivisionType extends Model
 {
@@ -32,5 +33,25 @@ class DivisionType extends Model
     {
         parent::__construct($attributes);
         $this->table = config('prion-geography.database.tables.division_types');
+    }
+
+
+    public function scopeName(Builder $builder, $divisionType): Builder
+    {
+        return $builder->where('name', $divisionType);
+    }
+
+    /**
+     * Pull a Division Type from a String
+     *
+     * @param $divisionType
+     *
+     * @return DivisionType
+     */
+    public static function fromName($divisionType): DivisionType
+    {
+        return Cache::remember("division_type:name:{$divisionType}", 15, function () use ($divisionType) {
+            return DivisionType::name($divisionType)->limit(1)->first();
+        });
     }
 }

@@ -24,10 +24,11 @@ class CreateCountriesTables extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('name_full');
-            $table->string('iso', 2);
-            $table->string('iso_long', 3);
-            $table->string('iso_numeric', 3);
+            $table->string('name_full')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('iso', 2)->nullable();
+            $table->string('iso_long', 3)->nullable();
+            $table->string('iso_numeric', 3)->nullable();
             $table->unsignedBigInteger('continent_id')->nullable();
 
             $table->foreign('continent_id')

@@ -1,6 +1,6 @@
 <?php
 
-namespace PrionDevelopment\Database\Seeders\Countries;
+namespace Database\Seeders\Countries;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -12,20 +12,20 @@ use PrionDevelopment\Geography\Models\Division;
 use PrionDevelopment\Geography\Models\DivisionType;
 use PrionDevelopment\Geography\Models\RegionType;
 
-class GreatBritianSeeder extends Seeder
+class IrelandSeeder extends Seeder
 {
-    protected $name = 'United Kingdom';
-    protected $nameFull = 'The United Kingdom of Great Britain and Northern Ireland';
+    protected $name = 'Ireland';
+    protected $nameFull = 'Republic of Ireland';
 
     /** @var Country */
     protected $country;
 
-    protected $iso = 'GB';
-    protected $isoLong = 'GBR';
-    protected $isoNumeric = '826';
+    protected $iso = 'IE';
+    protected $isoLong = 'IRL';
+    protected $isoNumeric = '372';
 
     protected $continent = 'Europe';
-    protected $capital = 'London';
+    protected $capital = 'Dublin';
 
     protected $language = 'English';
 
@@ -88,10 +88,10 @@ class GreatBritianSeeder extends Seeder
     {
         return [
             [
-                'symbol' => '£',
+                'symbol' => '€',
                 'symbol_html' => '',
-                'name' => 'Great Britain Pound',
-                'abbr' => 'GBP',
+                'name' => 'Euro',
+                'abbr' => 'EUR',
                 'primary' => true
             ]
         ];
@@ -113,29 +113,29 @@ class GreatBritianSeeder extends Seeder
     {
         return [
             'country' => [
-                'ENG' => [
-                    'name' => 'England',
-                    'abbr' => 'ENG',
+                'LEN' => [
+                    'name' => 'Leinster',
+                    'abbr' => 'LEN',
                     'region' => '',
-                    'capital' => '',
+                    'capital' => 'Dublin',
                 ],
-                'SCT' => [
-                    'name' => 'Scotland',
-                    'abbr' => 'SCT',
+                'UIE' => [
+                    'name' => 'Ulster',
+                    'abbr' => 'UIE',
                     'region' => '',
-                    'capital' => '',
+                    'capital' => 'Belfast',
                 ],
-                'WAL' => [
-                    'name' => 'Wales',
-                    'abbr' => 'WAL',
+                'MUN' => [
+                    'name' => 'Munster',
+                    'abbr' => 'MUN',
                     'region' => '',
-                    'capital' => '',
+                    'capital' => 'Cork',
                 ],
-                'NIR' => [
-                    'name' => 'Northern Ireland',
-                    'abbr' => 'NIR',
+                'CON' => [
+                    'name' => 'Connacht',
+                    'abbr' => 'CON',
                     'region' => '',
-                    'capital' => '',
+                    'capital' => 'Galway',
                 ],
             ],
         ];
