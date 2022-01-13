@@ -42,6 +42,7 @@ class BrazilSeeder extends Seeder
         ], [
             'name' => $this->name,
             'name_full' => $this->nameFull,
+            'slug' => strtolower($this->iso),
             'iso_long' => $this->isoLong,
             'iso_numeric' => $this->isoNumeric,
             'continent_id' => $this->continent()->id,
