@@ -2,7 +2,7 @@
 
 namespace PrionDevelopment\Geography\tests\Unit;
 
-use PrionDevelopment\database\seeders\ContinentSeeder;
+use PrionDevelopment\Database\Seeders\ContinentSeeder;
 use PrionDevelopment\Geography\Models\Continent;
 use PrionDevelopment\Geography\tests\GeographyBaseTest;
 

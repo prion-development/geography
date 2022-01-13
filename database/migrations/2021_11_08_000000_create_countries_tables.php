@@ -56,6 +56,7 @@ class CreateCountriesTables extends Migration
             $table->id();
             $table->string('name');
             $table->string('abbreviation');
+            $table->string('slug', 300)->nullable();
             $table->unsignedBigInteger('country_region_id')->nullable();
             $table->unsignedBigInteger('division_type_id')->nullable();
             $table->unsignedBigInteger('country_id')->nullable();

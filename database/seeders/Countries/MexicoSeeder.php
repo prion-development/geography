@@ -12,7 +12,7 @@ use PrionDevelopment\Geography\Models\Division;
 use PrionDevelopment\Geography\Models\DivisionType;
 use PrionDevelopment\Geography\Models\RegionType;
 
-class MexicoSeeder extends Seeder
+class MexicoSeeder extends CountryBaseSeeder
 {
     protected $name = 'Mexico';
     protected $nameFull = 'United Mexican States';
@@ -52,32 +52,6 @@ class MexicoSeeder extends Seeder
                 $this->division($divisionType, $division);
             }
         }
-    }
-
-    public function continent(): Continent
-    {
-        return Continent::firstOrCreate([
-            'name' => $this->continent
-        ]);
-    }
-
-    public function divisionType(string $type): DivisionType
-    {
-        $type = strtolower($type);
-        return DivisionType::firstOrCreate([
-            'name' => $type
-        ]);
-    }
-
-    public function division(string $type, array $division): Division
-    {
-        $type = strtolower($type);
-        return Division::firstOrCreate([
-            'name' => $division['name'],
-            'abbreviation' => $division['abbr'],
-            'division_type_id' => $this->divisionType($type)->id,
-            'country_id' => $this->country->id,
-        ]);
     }
 
     /**
